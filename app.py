@@ -13,7 +13,7 @@ countVectorizer = None
 tfIdfTransformer = None
 worstFeats = None
 
-@app.route('/classify/<comment>')
+@app.route('/<comment>')
 def homepage(comment=None):
 	data = [comment.encode("utf-8")]
 	data = preprocess(data, forTraining = False)
